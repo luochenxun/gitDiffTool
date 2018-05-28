@@ -26,6 +26,12 @@ def usage():
   print "  -d [sCommit] dCommit  : diff two commit(if given one diff with current commit), output the result using html"
   print "  -h|--help             : print this usage"
   print "  -v|--version          : print the version"
+  print '''
+Examples:
+    jDiffTool.py -d 79809324 341324   # compare tow commit
+    jDiffTool.py -d 787234            # compare current branch with given commit
+    jDiffTool.py -d develop           # compare current branch with given branch's name
+  '''
   print "\n"
   os._exit(0)
 
@@ -229,7 +235,7 @@ class Commit:
 
 def diffTool(commits):
     if len(commits) != 1 and len(commits) != 2:
-        print("please input");
+        print("please input a commit object");
         usage();
     if len(commits) == 1:
         diffCommit('', commits[0])
@@ -239,7 +245,7 @@ def diffTool(commits):
 def diffCommit(sCommit , dCommit):
     result = os.popen("git diff --name-only " + sCommit + " " + dCommit).readlines()
     files = []
-    for line in result[:len(result)-1]:
+    for line in result[:len(result)]:
         filePath = line.replace("\n", "")
         modifiedFile = ModifiedFile(filePath, sCommit, dCommit)
         files.append(modifiedFile)
