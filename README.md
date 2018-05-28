@@ -13,12 +13,13 @@ Usage: jDiffTool.py [OPTIONS] [params]
   -v|--version          : print the version
 ```
 
-example
-``
+## example
+
+```
 jDiffTool.py -d 79809324 341324   # compare tow commit
 jDiffTool.py -d 787234            # compare current branch with given commit
 jDiffTool.py -d develop           # compare current branch with given branch's name
-``
+```
 
 # 中文简介 chinese
 
@@ -35,9 +36,10 @@ Usage: jDiffTool.py [OPTIONS] [params]
   -v|--version          : print the version
 ```
 
-比如
-``
+## 示例
+
+```
 jDiffTool.py -d 79809324 341324   # 对比两个commit
 jDiffTool.py -d 787234            # 使用某一commit与当前分支对比
 jDiffTool.py -d develop           # 使用某一分支与当前分支对比
-``
+```
