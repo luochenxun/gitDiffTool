@@ -1,3 +1,14 @@
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [gitDiffTool](#gitdifftool)
+	- [usage](#usage)
+	- [example](#example)
+- [中文简介 chinese](#中文简介-chinese)
+	- [usage](#usage)
+	- [示例](#示例)
+
+<!-- /TOC -->
+
 # gitDiffTool
 
 **gitDiffTool** is a tool to compare two commits of a gitProject and generate the diff into html(generate in output/ dir of current dir). 
