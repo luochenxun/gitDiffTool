@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """  Code-Analysis tool of git project  """
 __author__ = 'luochenxun(luochenxun@gmail.com)'
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 import getopt
 import sys
