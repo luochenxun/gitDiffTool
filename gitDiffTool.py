@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """  Code-Analysis tool of git project  """
 __author__ = 'luochenxun(luochenxun@gmail.com)'
-__version__ = '1.0.1'
+__version__ = '1.0.2'
 
 import getopt
 import sys
@@ -79,6 +79,8 @@ listTemplete = '''
         border-width: 1px;
         border-color: #999999;
         border-collapse: collapse;
+        table-layout: fixed;
+        width:100%;
     }
     table.hovertable th {
         background-color:#7799dd;
@@ -95,6 +97,8 @@ listTemplete = '''
         padding: 8px;
         border-style: solid;
         border-color: #a9c6c9;
+        word-break: break-all;
+        word-wrap: break-word;
     }
     /* /hovertable */
 
@@ -106,7 +110,7 @@ listTemplete = '''
 <h2>Modified files of two commit</h2>
 <table class="hovertable">
     <tr>
-        <th>Modifyed Files</th><th>Participants</th>
+        <th width="85%">Modifyed Files</th><th>Participants</th>
     </tr>
     <***templete of table***>
 </table>
@@ -277,7 +281,7 @@ def generateHTML(files):
     for mf in files:
         # file in index
         rows = rows + '''<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">'''
-        rows = rows + '\n<td><a href=\'pages/' + mf.fileName + '.html\' target=\'page\'>'+ mf.filePath + '</a></td><td>' + mf.modifier + '</td>\n</tr>\n'
+        rows = rows + '\n<td width="85%"><a href=\'pages/' + mf.fileName + '.html\' target=\'page\'>'+ mf.filePath + '</a></td><td>' + mf.modifier + '</td>\n</tr>\n'
         #
     listTemplete = listTemplete.replace('<***templete of table***>',rows)
     fout = open('output/list.html' , 'w+');
