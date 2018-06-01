@@ -17,7 +17,7 @@ You can read the diff in one html page, the list of modified files on one side a
 ## usage
 
 ```
-Usage: jDiffTool.py [OPTIONS] [params]
+Usage: gitDiffTool.py [OPTIONS] [params]
 
   -d [sCommit] dCommit  : diff two commit(if given one diff with current commit), output the result using html
   -h|--help             : print this usage
@@ -27,9 +27,9 @@ Usage: jDiffTool.py [OPTIONS] [params]
 ## example
 
 ```
-jDiffTool.py -d 79809324 341324   # compare tow commit
-jDiffTool.py -d 787234            # compare current branch with given commit
-jDiffTool.py -d develop           # compare current branch with given branch's name
+gitDiffTool.py -d 79809324 341324   # compare tow commit
+gitDiffTool.py -d 787234            # compare current branch with given commit
+gitDiffTool.py -d develop           # compare current branch with given branch's name
 ```
 
 # 中文简介 chinese
@@ -40,7 +40,7 @@ jDiffTool.py -d develop           # compare current branch with given branch's n
 ## usage
 
 ```
-Usage: jDiffTool.py [OPTIONS] [params]
+Usage: gitDiffTool.py [OPTIONS] [params]
 
   -d [sCommit] dCommit  : diff two commit(if given one diff with current commit), output the result using html
   -h|--help             : print this usage
@@ -50,7 +50,7 @@ Usage: jDiffTool.py [OPTIONS] [params]
 ## 示例
 
 ```
-jDiffTool.py -d 79809324 341324   # 对比两个commit
-jDiffTool.py -d 787234            # 使用某一commit与当前分支对比
-jDiffTool.py -d develop           # 使用某一分支与当前分支对比
+gitDiffTool.py -d 79809324 341324   # 对比两个commit
+gitDiffTool.py -d 787234            # 使用某一commit与当前分支对比
+gitDiffTool.py -d develop           # 使用某一分支与当前分支对比
 ```
