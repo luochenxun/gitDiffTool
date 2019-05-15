@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """  Code-Analysis tool of git project  """
 __author__ = 'luochenxun(luochenxun@gmail.com)'
-__version__ = '1.0.2'
+__version__ = '1.0.3'
 
 import getopt
 import sys
@@ -180,7 +180,7 @@ class ModifiedFile:
         index = baseName.rfind('.')
         self.fileName = baseName[:index]
         self.commits = []
-        result = os.popen("git log -p %s..%s %s"%(dCommit,sCommit,filePath)).readlines()
+        result = os.popen("git log -p %s...%s -- %s"%(dCommit,sCommit,filePath)).readlines()
         commitInfo = []
         for line in result:
             line = line.replace("\n", "")
